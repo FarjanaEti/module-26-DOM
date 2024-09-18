@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>propagation</title>
+</head>
+<body id="body">
+    <h1>Doing propagation</h1>
+    <section id="section-container">
+       <ul id="ul-list">
+ <li id="item-1">Lorem, ipsum dolor.</li>
+ <li id="item-2">Numquam, nesciunt porro.</li>
+ <li id="item-3">Laboriosam, debitis reiciendis?</li>
+ <li id="item-4">Quaerat, sequi sit?</li>
+ <li id="item-5">Tempore, veniam ut!</li>
+ <li id="item-6">Impedit, quaerat aspernatur?</li>
+       </ul>                       
+    </section>  
+    <script>
+       document.getElementById('item-3').addEventListener('click',function(){
+          console.log('item-3 clicked')                    
+       })                       
+       document.getElementById('ul-list').addEventListener('click',function(){
+          console.log('ul clicked')                    
+       })                       
+       document.getElementById('section-container').addEventListener('click',function(){
+          console.log('section clicked')                    
+       })                       
+       document.getElementById('body').addEventListener('click',function(){
+          console.log('body clicked')                    
+       })                       
+       document.getElementById('item-2').addEventListener('click',function(event){
+          console.log('item-2 clicked');
+         event.stopPropagation();
+         //event.stopImmediatePropagation();                    
+       })                       
+    </script>                        
+</body>
+</html>

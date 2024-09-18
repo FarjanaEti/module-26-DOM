@@ -1,0 +1,40 @@
+<!-- You are given an HTML page with a text input field, 
+ a button, and an empty unordered list (<ul>). Your task is 
+to write a JavaScript function that, when the button is
+ clicked, will take the value from the input field, create 
+ a new list item (<li>) with that value, and add it to the 
+unordered list. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Add msg in ul</title>
+</head>
+<body>
+<main>
+<input id="input" type="text">
+<button id="btn-add">Add item</button> 
+<ul id="emty-ul">
+ <li>First msg</li>                             
+</ul>                          
+</main> 
+<script>
+   document.getElementById('btn-add').addEventListener('click',function(){
+//       const ulList=document.getElementById('emty-ul');
+//       const li=document.createElement('li')
+//       li.innerText='muri kha' 
+//       li.classList.add('item') 
+//       ulList.appendChild(li)  this is for add li in ul list                     
+   const inputFild=document.getElementById('input');
+   const newMsg=inputFild.value;
+   const ulContainer=document.getElementById('emty-ul')
+   const li=document.createElement('li')
+   li.innerText=newMsg
+   console.log(li)
+   ulContainer.appendChild(li)
+   inputFild.value='';
+  })                           
+</script>                             
+</body>
+</html>

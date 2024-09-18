@@ -1,0 +1,30 @@
+<!-- You are given an HTML page with a button and a <div>
+ element. Your task is to write a JavaScript function that, 
+ when the button is clicked, will change the text inside the 
+ <div> to "Hello, World!". -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+<main>
+ <body>
+<div>
+       <h1 id="msg-container">HELLO ETI</h1>                          
+  </div>     
+<button onclick="massagechange()">CLICk IT</button>                            
+</main> 
+<script>
+   function massagechange(){
+     const msg=document.getElementById('msg-container');
+     //console.log(msg)
+     msg.innerText='Hello WOrld!!'
+   }                           
+</script>                                                 
+  </body>
+  <script>
+                            
+  </script>
+ </html>

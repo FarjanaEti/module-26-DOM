@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>EVENTS</title>
+ <main>
+   <h1 onclick="console.log('This is my dom')">This my events of DOM</h1> 
+    <button onclick="console.log(9)">click it</button>
+    <button onclick="document.body.style.background='red'">Make red</button> 
+    <button onclick="makeBlue()">Make blue</button>
+    <button id="make-purple">make purple</button>   
+    <button id="make-gray">make gray</button>   
+    <button id="make-pink">make Pink</button>   
+    <button id="make-green">make green</button>   
+    <br>
+    <br>
+    <h1 id="handeled">changing massage by click</h1>
+    <button onclick="handeledClick()">click here to change the h1 msg</button>
+ </main>
+ <script src="event.js"></script>
+ <script>
+  function makeBlue(){
+    document.body.style.background='blue'                          
+  }
+  const makepink=document.getElementById('make-pink');
+  makepink.addEventListener('click',makePink);
+
+  function makePink(){
+     document.body.style.background='pink'                         
+  }
+//   function handeledClick(){
+//      const msgid=document.getElementById('handeled');
+//      msgid.innerText='muri kha';                         
+//   }
+ </script>
+</head>
+<body>
+                              
+</body>
+</html>
